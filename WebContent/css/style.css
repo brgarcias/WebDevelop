@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+body {
+  padding: 50px;
+}
+
+#nome, #populacao, #area{
+	width: 500px;
+}
