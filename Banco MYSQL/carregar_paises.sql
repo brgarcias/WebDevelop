@@ -1,0 +1,22 @@
+CREATE DATABASE paises;
+USE paises;
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE TABLE IF NOT EXISTS `Pais` (
+    `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `nome` VARCHAR(255) NOT NULL,
+    `populacao` BIGINT(255) NOT NULL,
+    `area` DOUBLE(15 , 2 ) NOT NULL UNIQUE,
+    PRIMARY KEY (`id`)
+)  ENGINE=INNODB DEFAULT CHARACTER SET=UTF8;
+
+INSERT INTO `pais` (`nome`,`populacao`,`area`) VALUES ('Brasil','210147125','8515767049');
+INSERT INTO `pais` (`nome`,`populacao`,`area`) VALUES ('Italia','60665551','301338');
+INSERT INTO `pais` (`nome`,`populacao`,`area`) VALUES ('Alemanha','82800000','357051');
+INSERT INTO `pais` (`nome`,`populacao`,`area`) VALUES ('Mexico','123675325','1958201');
+INSERT INTO `pais` (`nome`,`populacao`,`area`) VALUES ('Argentina','43590368','2780400');
+
+SELECT * FROM `pais`;
